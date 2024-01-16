@@ -3,9 +3,12 @@ import { getUsers } from "./API/GET/getUsers.js"
 import { getUserById } from "./API/GET/getUserById.js"
 import { PORT } from "./constants.js"
 import { setUser } from "./API/POST/setUser.js"
+import cors from "cors"
 
 const app = express()
+
 app.use(express.json())
+app.use(cors())
 
 //GET
 app.get("/api/users", getUsers)
