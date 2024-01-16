@@ -1,4 +1,4 @@
-import express, { json } from "express"
+import express from "express"
 import { getUsers } from "./API/GET/getUsers.js"
 import { getUserById } from "./API/GET/getUserById.js"
 import { PORT } from "./constants.js"

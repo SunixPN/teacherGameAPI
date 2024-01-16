@@ -6,7 +6,7 @@ export const setUser = async (req, res) => {
         const currentData = await fs.readFile(PATH, { encoding: "utf-8", flag: "r" })
         const parseData = JSON.parse(currentData)
 
-        parseData.users.push(req.body)
+        parseData.push(req.body)
 
         await fs.writeFile(PATH, JSON.stringify(parseData), "utf-8")
 
